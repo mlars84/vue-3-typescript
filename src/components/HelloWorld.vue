@@ -6,16 +6,16 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
 export default class HelloWorld extends Vue {
-  @Prop() private exampleProperty!: string;
+  @Prop() private exampleProperty!: string
 
-  private test!: string;
+  private test!: string
 
   private created() {
-    this.test = 'testy boy';
+    this.test = 'testy boy'
   }
 
 }

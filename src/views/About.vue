@@ -5,14 +5,14 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
 export default class About extends Vue {
-  public text!: string;
+  public text!: string
 
   public created() {
-    this.text = 'This is an about page';
+    this.text = 'This is an about page'
   }
 }
 </script>
