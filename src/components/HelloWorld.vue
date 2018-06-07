@@ -9,7 +9,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
-export default class HelloWorld extends Vue {
+class HelloWorld extends Vue {
   @Prop() private exampleProperty!: string
 
   private test!: string
@@ -19,6 +19,8 @@ export default class HelloWorld extends Vue {
   }
 
 }
+
+export default HelloWorld
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

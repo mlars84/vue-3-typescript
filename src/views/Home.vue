@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <img src="../assets/logo.png">
     <HelloWorld exampleProperty="Welcome to Your Vue.js + TypeScript App"/>
   </div>
 </template>

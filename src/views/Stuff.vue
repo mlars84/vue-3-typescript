@@ -1,23 +1,42 @@
 <template>
-  <div class="stuff">
-    <h1>{{ text }}</h1>
+  <div>
+    <p>Value: {{ someDataProperty }}</p>
+    <p>Previous Value: {{ newProperty }}</p>
+    <p>{{ exampleProp }}</p>
+    <p>{{ someComutedProperty }}</p>
+    <input @input="updateProperty($event)">
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import {Component, Prop, Vue, Watch} from 'vue-property-decorator'
 
 @Component
-export default class Stuff extends Vue {
-  public text!: string
+class Stuff extends Vue {
+  @Prop({default: 'Example'})
+  public exampleProp!: string
+  newProperty: string = ''
 
-  public created() {
-    this.text = 'This is a stuff page'
+  public someDataProperty: string = 'Boop!'
+
+  get someComutedProperty() {
+    return Math.random()
+  }
+
+  @Watch('someDataProperty')
+  public onPropertyChanged(value: string, oldValue: string) {
+    this.newProperty = oldValue
+  }
+
+  public updateProperty(e: any) {
+    this.someDataProperty = e.target.value
   }
 }
+
+export default Stuff
 </script>
 
 <style lang="scss">
-  
 </style>
+
 
