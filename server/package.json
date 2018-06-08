@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon src/app.ts --exec babel-node"
+    "start": "nodemon src/app.js --exec babel-node"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -13,5 +13,8 @@
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "morgan": "^1.9.0"
+  },
+  "dependencies": {
+    "mongoose": "^5.1.4"
   }
 }

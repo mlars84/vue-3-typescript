@@ -7,7 +7,6 @@
     </q-list>
     <!-- <p>Value: {{ someDataProperty }}</p> -->
     <!-- <p>Previous Value: {{ newProperty }}</p> -->
-    <!-- <p>{{ exampleProp }}</p> -->
     <!-- <p>{{ someComutedProperty }}</p> -->
     <!-- <q-input :value="someDataProperty" @input="updateProperty($event)"></q-input> -->
   </q-page>
@@ -19,9 +18,6 @@ import PostsService from '../services/PostsService'
 
 @Component
 export default class Home extends Vue {
-  @Prop({default: 'Example'})
-  public exampleProp!: string
-
   public newProperty!: string
   public posts: any = []
 
@@ -42,7 +38,11 @@ export default class Home extends Vue {
 
   public async getPosts () {
     const response = await PostsService.fetchPosts()
-    this.posts = response.data
+    this.posts = response.data.posts
+  }
+
+  public async addPosts () {
+    const response = await PostsService.addPosts()
   }
 
   public updateProperty (e: any) {

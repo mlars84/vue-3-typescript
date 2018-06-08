@@ -26,3 +26,8 @@ export default class MoreStuff extends Vue {
   }
 }
 </script>
+
+<style lang="scss">
+
+</style>
+
