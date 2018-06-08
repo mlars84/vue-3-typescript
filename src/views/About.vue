@@ -1,25 +1,14 @@
 <template>
-  <div class="about">
-    <h1>{{ text }}</h1>
-  </div>
+  <q-page padding>
+    <p>{{ text }}</p>
+  </q-page>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
 
 @Component
-class About extends Vue {
-  public text!: string
-
-  public created() {
-    this.text = 'This is an about page'
-  }
+export default class About extends Vue {
+  public text: string = 'This is an about page yo'
 }
-
-export default About
 </script>
-
-<style lang="scss">
-  
-</style>
-

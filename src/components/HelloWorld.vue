@@ -14,7 +14,7 @@ class HelloWorld extends Vue {
 
   private test!: string
 
-  private created() {
+  private created () {
     this.test = 'testy boy'
   }
 

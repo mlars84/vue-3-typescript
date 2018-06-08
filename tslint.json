@@ -16,6 +16,8 @@
     "object-literal-sort-keys": false,
     "no-consecutive-blank-lines": false,
     "semicolon": [true, "never"],
-    "trailing-comma": [false, {"multiline": "never", "singleline": "never"}]
+    "trailing-comma": [false, {"multiline": "never", "singleline": "never"}],
+    "space-before-function-paren": false,
+    "no-trailing-whitespace": false
   }
 }

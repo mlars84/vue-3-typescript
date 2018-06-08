@@ -15,20 +15,20 @@ import {Component, Prop, Vue, Watch} from 'vue-property-decorator'
 class Stuff extends Vue {
   @Prop({default: 'Example'})
   public exampleProp!: string
-  newProperty: string = ''
+  public newProperty: string = ''
 
   public someDataProperty: string = 'Boop!'
 
-  get someComutedProperty() {
+  get someComutedProperty () {
     return Math.random()
   }
 
   @Watch('someDataProperty')
-  public onPropertyChanged(value: string, oldValue: string) {
+  public onPropertyChanged (value: string, oldValue: string) {
     this.newProperty = oldValue
   }
 
-  public updateProperty(e: any) {
+  public updateProperty (e: any) {
     this.someDataProperty = e.target.value
   }
 }

@@ -10,6 +10,9 @@
     "test:e2e": "vue-cli-service test:e2e"
   },
   "dependencies": {
+    "quasar-cli": "^0.16.4",
+    "quasar-extras": "^2.0.0",
+    "quasar-framework": "^0.16.0",
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.16",
     "vue-class-component": "^6.0.0",
@@ -29,7 +32,12 @@
     "babel-core": "7.0.0-bridge.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
     "ts-jest": "^22.4.6",
+    "unite.js": "^0.0.5-e",
+    "vue-cli-plugin-quasar": "^0.1.7",
+    "vue-loader": "^15.2.4",
     "vue-template-compiler": "^2.5.16"
   },
   "postcss": {
