@@ -21,7 +21,7 @@
       ]
     },
     "lib": [
-      "es2015",
+      "es2018",
       "dom",
       "dom.iterable",
       "scripthost"

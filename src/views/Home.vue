@@ -15,7 +15,7 @@ import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
 export default class Home extends Vue {
   @Prop({default: 'Example'})
   public exampleProp!: string
-  public newProperty: string = ''
+  public newProperty!: string
 
   public someDataProperty: string = 'Boop!'
 
