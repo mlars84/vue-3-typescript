@@ -14,7 +14,11 @@ app.get('/posts', (req, res, err) => {
     [{
       title: 'Hello world',
       description: 'Hey there. This is cool stuff.'
-    }]
+    },
+  {
+    title: 'Hello Universe',
+    description: 'The universe is big.'
+  }]
   )
 })
 

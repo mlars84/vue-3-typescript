@@ -1,15 +1,15 @@
 <template>
-  <div :style="changed">
-    <input type="text" v-model="moreText">
+  <q-page padding :style="changed">
+    <q-input v-model="moreText"></q-input>
     <button @click="changeText">Change it!</button>
-  </div>
+  </q-page>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
 
 @Component
-class MoreStuff extends Vue {
+export default class MoreStuff extends Vue {
 
   public moreText: string = 'Default more text'
   public changed!: string
@@ -24,8 +24,5 @@ class MoreStuff extends Vue {
       return this.changed = 'background-color: red;'
     }
   }
-
 }
-
-export default MoreStuff
 </script>

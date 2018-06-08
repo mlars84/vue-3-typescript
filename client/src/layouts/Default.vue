@@ -41,24 +41,13 @@
             <q-item-side icon="ion-ios-information-outline" />
             <q-item-main label="About" />
           </q-item>
-
-          <q-item-separator />
-          <q-list-header>Essential Links</q-list-header>
-          <q-item @click.native="openURL('http://quasar-framework.org')">
-            <q-item-side icon="ion-university" />
-            <q-item-main label="Docs" sublabel="quasar-framework.org"></q-item-main>
+          <q-item to="/stuff">
+            <q-item-side icon="ion-ios-information-outline" />
+            <q-item-main label="Stuff" />
           </q-item>
-          <q-item @click.native="openURL('https://discord.gg/5TDhbDg')">
-            <q-item-side icon="ion-chatbubbles" />
-            <q-item-main label="Discord Chat Channel" sublabel="https://discord.gg/5TDhbDg"></q-item-main>
-          </q-item>
-          <q-item @click.native="openURL('http://forum.quasar-framework.org')">
-            <q-item-side icon="ion-compose" />
-            <q-item-main label="Forum" sublabel="forum.quasar-framework.org"></q-item-main>
-          </q-item>
-          <q-item @click.native="openURL('https://twitter.com/quasarframework')">
-            <q-item-side icon="ion-social-twitter" />
-            <q-item-main label="Twitter" sublabel="@quasarframework"></q-item-main>
+          <q-item to="/more_stuff">
+            <q-item-side icon="ion-ios-information-outline" />
+            <q-item-main label="More Stuff" />
           </q-item>
         </q-list>
       </q-list>

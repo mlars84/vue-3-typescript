@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <q-page padding>
     <p>Value: {{ someDataProperty }}</p>
     <p>Previous Value: {{ newProperty }}</p>
     <p>{{ exampleProp }}</p>
     <p>{{ someComutedProperty }}</p>
     <input @input="updateProperty($event)">
-  </div>
+  </q-page>
 </template>
 
 <script lang="ts">
