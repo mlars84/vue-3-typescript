@@ -12,7 +12,7 @@ mongoose.connect(mongoURI)
 let db = mongoose.connection
 
 db.on('error', console.error.bind(console, 'connection error'))
-db.once('open', callback => {
+db.once('open', (callback) => {
   console.log('Success!')
 })
 
@@ -32,7 +32,7 @@ app.post('/api/posts', (req, res) => {
     description: description
   })
 
-  newPost.save(error => {
+  newPost.save((error) => {
     if (error) {
       console.log(error)
     }
