@@ -4,6 +4,7 @@ import cors from 'cors'
 import morgan from 'morgan'
 import mongoose from 'mongoose'
 import Post from '../models/Post'
+import request from 'request'
 
 let mongoURI = 'mongodb://localhost:27017/posts'
 
@@ -63,6 +64,23 @@ app.delete('/api/posts/:id', (req, res) => {
     })
   })
 })
+
+let apiKey = 'c6b35afe21df33e7ec358d02df7f2eb6'
+let lat = '44.9532392'
+let long = '-93.1403'
+
+app
+  .get('/api/forecast', (req, res) => {
+    request(
+      `https://api.darksky.net/forecast/${apiKey}/${lat},${long}`,
+      function (error, response, body) {
+        // console.log(error)
+        // console.log('statusCode: ', response)
+        // console.log('body: ', body)
+        res.json(body)
+      }
+    )
+  })
 
 app.listen(PORT, () => {
   console.log(`Listening on ${PORT}`)

@@ -15,6 +15,7 @@
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
 import PostsService from '../services/PostsService'
+import axios from 'axios'
 
 @Component
 export default class Home extends Vue {
@@ -32,8 +33,24 @@ export default class Home extends Vue {
     this.newProperty = oldValue
   }
 
+  public created () {
+    let apiKey = 'c6b35afe21df33e7ec358d02df7f2eb6'
+    let lat = '44.9532392'
+    let long = '-93.1403'
+
+    axios
+      .get(`https://api.darksky.net/forecast/${apiKey}/${lat},${long}`)
+      .then((response) => {
+        console.log(response)
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }
+
   public mounted () {
     this.getPosts()
+    this.getForecast()
   }
 
   public async getPosts () {
@@ -43,6 +60,11 @@ export default class Home extends Vue {
 
   public async addPosts () {
     const response = await PostsService.addPosts()
+  }
+
+  public async getForecast () {
+    const response = await PostsService.getForecast()
+    console.log(response)
   }
 
   public updateProperty (e: any) {

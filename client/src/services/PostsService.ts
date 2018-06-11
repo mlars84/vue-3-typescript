@@ -6,5 +6,8 @@ export default {
   },
   addPosts () {
     return Api().post('/api/posts')
+  },
+  getForecast () {
+    return Api().get('api/forecast')
   }
 }
